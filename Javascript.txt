@@ -1,0 +1,35 @@
+Javascript Executor:
+JavascriptExecutor js=(JavascriptExecutor)driver;
+Scrolldown :
+js.executescript("window.scroll(0,1000)");
+Scrollup :
+js.executescripr("window.scroll(0,-1000)");
+scroll down bottom :
+js.executescript("window.scrollTo(0,document.body.scrollHeight)");
+Element :
+js.executescript("arguments[0].scrollIntoView(true);",element);
+Scroll up top:
+js.executescript("window.scroll(0,0)");
+
+sendkeys:
+js.executescript("document.getElementById('locator').value='username'");
+js.executescript("document.getElementById('locator').value='password'");
+
+click:
+js.executeScript("arguments[0].click();", element);
+		
+
+Check Image:
+
+		Boolean p = (Boolean) ((JavascriptExecutor) driver).executeScript("return arguments[0].complete "
+				+ "&& typeof arguments[0].naturalWidth != \"undefined\" " + "&& arguments[0].naturalWidth > 0",
+				element);
+
+
+
+
+
+
+
+
+
